@@ -11,19 +11,51 @@
 
 		<header>
 			<h1>thinking with type</h1>
-			<p><a href="https://readings.design/PDF/thinkingwithtype_ellenlupton.pdf" target="_blank">thinking with type</a></p>
+			<p><a href="https://readings.design/PDF/thinkingwithtype_ellenlupton.pdf" target="_blank"><cite>thinking with type</cite></a></p>
 			<p>Ellen Lupton, 2010</p>
+
+			<!-- I learned about the "nav" element on MDN. -->
+			<!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/nav -->
+			<nav>
+				<ul>
+					<li>
+						<a href="#Letter">Letter</a>
+
+						<ul>
+							<li><a href="#Type as program & narrative">Type as program & narrative</a></li>
+							<li><a href="#Type Classification">Type Classification</a></li>
+							<li><a href="#Typeface on screen">Typeface on screen</a></li>
+						</ul>
+					</li>
+					<li>
+						My Response
+
+						<ul>
+							<li><a href="#We see type. We read type.">We see type. We read type.</a></li>
+							<li><a href="#There are no bad typeface, but only bad decision.">There are no bad typeface, but only bad decision.</a></li>
+							<li><a href="#The same letter can fell different.">The same letter can fell different.</a></li>
+							<li><a href="#The only limitations are in our expectations.">The only limitations are in our expectations.</a></li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+
 		</header>
 
 		<main>
 
-			<article>
+			<!-- I learned that an id can be added to an element so a link can jump directly to that specific part of the page. -->
+			<!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/id -->
+
+			<article id="Letter">
+				<header>
+					<h2>Letter</h2>
+				</header>
 
 				<section>
 
-					<!-- Original text part one-->
+					<!-- Original text part one, opening-->
 
-					<h2>Letter</h2>
 					<p>
 						This is not a book about fonts. This is not a book about fonts. It is a book about how to use them. Typefaces are an essential resource employed by graphic designers, just as glass, stone, steel, and countless other materials are employed by architects. Graphic designers sometimes create their own fonts and custom lettering. More commonly, however, they tap the vast library of existing typefaces, choosing and combining them in response to a particular audience or situation. To do this with wit and wisdom requires knowledge of how—and why—letterforms have evolved.
 					</p>
@@ -42,10 +74,13 @@
 					</p>
 
 					<!-- aside vs blockquote: aside = my response on the reading / blockquote = a direct quote from the reading -->
+					<!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/aside -->
 
 					<!-- Response part one -->
 
-					<aside>
+					<aside id="We see type. We read type.">
+						<h4>We see type. We read type.</h4>
+
 						<p>
 							I found this point especially interesting because it made me think about type as image. We usually think of letters as something we read, but they are also visual forms that we see and recognize.
 						</p>
@@ -60,7 +95,7 @@
 
 				</section>
 
-				<section>
+				<section id="Type as program & narravtive">
 
 					<!-- Original text part two -->
 
@@ -90,7 +125,8 @@
 
 					<!-- Response part two -->
 
-					<aside>
+					<aside id="There are no bad typeface, but only bad decision.">
+						<h4>There are no bad typeface, but only bad decision.</h4>
 						<p>
 							I believe different typefaces carry different meanings and feelings. There are not necessarily bad typefaces, but there can be bad decisions—it is more about whether the choice is appropriate for the content. I also think the feeling of a typeface can come from its history. The way a typeface looks is often connected to the time and technology in which it was created.
 						</p>
@@ -105,7 +141,7 @@
 
 				</section>
 
-				<section>
+				<section id="Type Classification">
 
 					<!-- Original text part three -->
 
@@ -126,7 +162,8 @@
 
 					<!-- Response part three -->
 
-					<aside>
+					<aside id="The same letter can fell different.">
+						<h4>The same letter can fell different.</h4>
 						<p>
 							I used to think about type classification mainly as a way to identify and organize typefaces based on their visual characteristics. After reading about the different classifications, what I found interesting is that these differences in form are not random. They can reflect different ways of creating letterforms, from handwriting to more abstract and geometric forms.
 						</p>
@@ -143,7 +180,7 @@
 
 				</section>
 
-				<section>
+				<section id="Typeface on screen">
 
 					<!-- Original text part four -->
 
@@ -163,7 +200,8 @@
 
 					<!-- Response part four -->
 
-					<aside>
+					<aside id="The only limitations are in our expectations.">
+						<h4>The only limitations are in our expectations.</h4>
 						<p>
 							What I found interesting about this section is how much technology has changed the possibilities of typography on screen. In the early web, designers had to work with a limited range of typefaces, while today <a href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Text_styling/Web_fonts" target="_blank">web fonts</a> give us much more freedom in the typefaces we can use online. This also made me realize that choosing type for a website is different from choosing type for print. For the web, we also need to think about how a font is delivered and works on different devices, rather than only how it looks in a fixed design.
 						</p>
