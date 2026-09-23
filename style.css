@@ -28,7 +28,7 @@ main {
 		background-color: lightsalmon;
 		padding-left: 0.2rem;
 		padding-right: 0.2rem;
-		&:hover {color: mediumblue;background-color: cornflowerblue;}
+		&:hover { color: mediumblue;background-color: cornflowerblue; }
 	}
 
 	aside {
@@ -72,6 +72,14 @@ h4 {
 a[href*='.pdf']{
 	text-decoration-line: underline;
 	&::after { content: ' ↗'; }
+}
+
+/* I want to indent the navigation list, so I searched on MDN for how to do it. */
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/text-indent */
+
+li.indent-nav {
+	text-indent: 1em;
+	&::before { content: ' →'; }
 }
 
 
