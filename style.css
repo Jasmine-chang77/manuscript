@@ -1,5 +1,5 @@
 html {
-	font-family: "source-serif-4", serif;
+	font-family: "Sentient-Regular", serif;
 	font-weight: 400;
 	font-style: normal;
 	font-size: 1.2rem;
@@ -25,7 +25,7 @@ h1 {
 }
 
 h2 {
-	font-family: "source-serif-4-display", serif;
+	font-family: "Sentient-Bold", serif;
 	font-weight: 700;
 	font-style: normal;
 	font-size: 1.8rem;
@@ -33,7 +33,7 @@ h2 {
 }
 
 h3 {
-	font-family: "source-serif-4-display", serif;
+	font-family: "Sentient-Bold", serif;
 	font-weight: 700;
 	font-style: normal;
 	font-size: 1.2rem;
@@ -56,8 +56,8 @@ body {
 	color: mediumblue;
 
 	hgroup {
-		font-family: "source-serif-4-display", serif;
-		font-weight: 400;
+		font-family: "Sentient-Bold", serif;
+		font-weight: 700;
 		font-style: normal;
 		font-size: 1.4rem;
 		line-height: 1;
@@ -103,7 +103,7 @@ main {
 	}
 
 	blockquote {
-		font-family: "source-serif-4-display", serif;
+		font-family: "Sentient-Regular", serif;
 		font-weight: 400;
 		font-style: normal;
 		font-size: 1.8rem;
