@@ -55,15 +55,12 @@ body {
 	background-color: cornsilk;
 	color: mediumblue;
 
-
-
 	hgroup {
 		font-family: "source-serif-4-display", serif;
 		font-weight: 400;
 		font-style: normal;
 		font-size: 1.4rem;
 		line-height: 1;
-		padding-top: 1rem;
 	}
 
 	nav {
