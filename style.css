@@ -14,8 +14,8 @@ the font package instructions to import their stylesheets into my main CSS. */
 	font-style: normal;
 	font-size: 1.2rem;
 	line-height: 1.8;
-	margin-block: 4%;
-	margin-inline: 8%;
+	margin-block: 6rem;
+	margin-inline: 8rem;
 }
 
 * * * {
