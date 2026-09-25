@@ -1,3 +1,12 @@
+/* I downloaded Sentient and Switzer from Fontshare and followed the font package
+instructions to import its stylesheet into my main CSS. */
+@import url('sentient.css');
+@import url('switzer.css');
+
+
+
+/* My styles start below. */
+
 :root {
 	font-family: "Sentient-Light", serif;
 	font-weight: 400;
@@ -14,8 +23,8 @@
 
 
 h1, h4 {
-	font-family: "helvetica-neue-lt-pro", sans-serif;
-	font-weight: 600;
+	font-family: "Switzer-Extrabold", sans-serif;
+	font-weight: 800;
 	font-style: normal;
 }
 
@@ -51,7 +60,6 @@ a[href*='.pdf']{
 
 
 body {
-	padding: 3rem;
 	background-color: cornsilk;
 	color: mediumblue;
 
@@ -91,7 +99,7 @@ main {
 	}
 
 	aside {
-		font-family: "helvetica-neue-lt-pro", sans-serif;
+		font-family: "Switzer-Regular", sans-serif;
 		font-weight: 400;
 		font-style: normal;
 		font-size: 0.9rem;
@@ -106,6 +114,7 @@ main {
 		font-weight: 400;
 		font-style: normal;
 		font-size: 1.8rem;
+		line-height: 1.2;
 	}
 }
 
