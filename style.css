@@ -1,14 +1,15 @@
-/* I downloaded Sentient and Switzer from Fontshare and followed the font package
-instructions to import its stylesheet into my main CSS. */
+/* I downloaded Sentient and Switzer from Fontshare and followed
+the font package instructions to import their stylesheets into my main CSS. */
 @import url('sentient.css');
 @import url('switzer.css');
-
+/* I wanted to use the typefaces shown in the book for each type classification. Since Sabon, Futura, and Bodoni...etc. were easier to find on Adobe Fonts, I added them to an Adobe Fonts web project and imported the project here. */
+@import url("https://use.typekit.net/jig8obp.css");
 
 
 /* My styles start below. */
 
 :root {
-	font-family: "Sentient-Light", serif;
+	font-family: 'Sentient-Light', serif;
 	font-weight: 400;
 	font-style: normal;
 	font-size: 1.2rem;
@@ -23,7 +24,7 @@ instructions to import its stylesheet into my main CSS. */
 
 
 h1, h4 {
-	font-family: "Switzer-Extrabold", sans-serif;
+	font-family: 'Switzer-Extrabold', sans-serif;
 	font-weight: 800;
 	font-style: normal;
 }
@@ -34,7 +35,7 @@ h1 {
 }
 
 h2 {
-	font-family: "Sentient-Medium", serif;
+	font-family: 'Sentient-Medium', serif;
 	font-weight: 500;
 	font-style: normal;
 	font-size: 1.8rem;
@@ -42,7 +43,7 @@ h2 {
 }
 
 h3 {
-	font-family: "Sentient-Medium", serif;
+	font-family: 'Sentient-Medium', serif;
 	font-weight: 500;
 	font-style: normal;
 	font-size: 1.2rem;
@@ -64,7 +65,7 @@ body {
 	color: mediumblue;
 
 	hgroup {
-		font-family: "Sentient-Regular", serif;
+		font-family: 'Sentient-Regular', serif;
 		font-weight: 400;
 		font-style: normal;
 		font-size: 1.4rem;
@@ -99,18 +100,20 @@ main {
 	}
 
 	aside {
-		font-family: "Switzer-Regular", sans-serif;
+		font-family: 'Switzer-Regular', sans-serif;
 		font-weight: 400;
 		font-style: normal;
 		font-size: 0.9rem;
 		color: salmon;
+	}
+
+	aside, div {
 		margin-block: 4rem;
 		margin-inline: 8rem;
-
 	}
 
 	blockquote {
-		font-family: "Sentient-Light", serif;
+		font-family: 'Sentient-Light', serif;
 		font-weight: 400;
 		font-style: normal;
 		font-size: 1.8rem;
@@ -128,27 +131,81 @@ main {
 	&::before { content: ' →'; }
 }
 .humanist {
-	font-family: "linotype-sabon", serif;
+	font-family: 'linotype-sabon', serif;
 	font-weight: 700;
 	font-style: normal;
 	font-size: 1.05rem;
 }
 .transitional {
-	font-family: "berthold-baskerville-pro", serif;
+	font-family: 'berthold-baskerville-pro', serif;
 	font-weight: 700;
 	font-style: normal;
 	font-size: 1rem;
 }
 .modern {
-	font-family: "bodoni-std", serif;
+	font-family: 'bodoni-std', serif;
 	font-weight: 700;
 	font-style: normal;
 	font-size: 1.1rem;
 }
 .geometric {
-	font-family: "futura-pt", sans-serif;
-	font-weight: 700;
+	font-family: futura-pt, sans-serif;
+	font-weight: 600;
 	font-style: normal;
 	font-size: 1.05rem;
 }
 
+.classification p {
+	font-family: 'Switzer-Regular', sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 0.6rem;
+	letter-spacing: 0.1rem;
+	margin-block: -1.2rem;
+}
+
+.classification p:nth-child(even) {
+    margin-block-end: 1rem;
+}
+
+.class-humanist {
+	font-family: 'linotype-sabon', serif;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 3.2rem;
+}
+.class-transitional {
+	font-family: 'berthold-baskerville-pro', serif;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 3.2rem;
+}
+.class-modern {
+	font-family: 'bodoni-std', serif;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 3.2rem;
+}
+.class-slab-serif {
+	font-family: 'clarendon-urw', serif;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 3.2rem;
+}
+.class-humanist-sans {
+	font-family: 'gill-sans-nova', serif;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 3.2rem;
+}.class-transitional-sans {
+	font-family: 'helvetica-lt-pro', sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 3.2rem;
+}
+.class-geometric-sans {
+	font-family: 'futura-pt', serif;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 3.2rem;
+}
