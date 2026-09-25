@@ -2,11 +2,14 @@
 the font package instructions to import their stylesheets into my main CSS. */
 @import url('sentient.css');
 @import url('switzer.css');
-/* I wanted to use the typefaces shown in the book for each type classification. Since Sabon, Futura, and Bodoni...etc. were easier to find on Adobe Fonts, I added them to an Adobe Fonts web project and imported the project here. */
+/* I wanted to use the typefaces shown in the book for each type classification. Since Sabon, Futura, and Bodoni...etc. were easier to find on Adobe Fonts, I added them to an Adobe Fonts web project and imported the project link here. */
 @import url("https://use.typekit.net/jig8obp.css");
 
 
 /* My styles start below. */
+
+/* TODO: Work on the variations and calculations later.
+Also think about better organization and whether there is a better way to nest the code. */
 
 :root {
 	font-family: 'Sentient-Light', serif;
@@ -30,8 +33,9 @@ h1, h4 {
 }
 
 h1 {
-	font-size: 7.5rem;
-	margin-block-end: 3rem;
+	font-family: 'Switzer-Extrabold', sans-serif;
+    font-size: 18rem;
+    line-height: 0.8;
 }
 
 h2 {
@@ -135,9 +139,53 @@ footer {
 
 /* All .class selectors below here. */
 
+/* I used 90vh because I wanted people to see the almost full cover when they first open the website. */
+.hero {
+    position: relative;
+    min-block-size: 90vh;
+}
+/* I used position: absolute to freely arrange the type and quotation marks
+and make the typography work more like an image. */
+.hero hgroup {
+    position: absolute;
+    inset-inline-start: 12rem;
+	inset-block-start: 2rem;
+
+	p {
+		font-family: 'Switzer-Regular', sans-serif;
+		font-size: 2.6rem;
+		line-height: 1;
+	}
+}
+.book-info {
+    position: absolute;
+    inset-inline-start: 40rem;
+    inset-block-start: 22rem;
+    font-family: 'Switzer-Regular', sans-serif;
+    font-size: 1rem;
+    line-height: 0.8;
+}
+.hero::before {
+    content: ' “';
+    position: absolute;
+    inset-inline-start: -14rem;
+    inset-block-start: -12rem;
+    font-family: 'Switzer-Bold', serif;
+    font-size: 38rem;
+    line-height: 1;
+}
+.hero::after {
+    content: ' ”';
+    position: absolute;
+    inset-inline-start: 42rem;
+    inset-block-start: 16rem;
+    font-family: 'Switzer-Bold', serif;
+    font-size: 38rem;
+    line-height: 1;
+}
+
 /* I want to indent the navigation list, so I searched on MDN for how to do it. */
 /* https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/text-indent */
-
 .indent-nav {
 	text-indent: 1em;
 	&::before {
@@ -178,7 +226,7 @@ footer {
 	letter-spacing: 0.1rem;
 	margin-block: -1.2rem;
 }
-
+/* I used :nth-child(even) to select every even <p>, which is the typeface name, and add space after each typeface group. */
 .classification p:nth-child(even) {
     margin-block-end: 1rem;
 }
