@@ -29,13 +29,16 @@ Also think about better organization and whether there is a better way to nest t
 	--font-sans: 'Switzer', sans-serif;
 
 	/* Size */
+	--size-xs: calc(var(--size-sm) / 2); /* 0.5rem */
 	--size-sm: 1rem;
 	--size-md: 2rem;
 	--size-lg: 3rem;
-	--size-xl: calc(2 * var(--size-md));
+	--size-xl: calc(2 * var(--size-md)); /* 4rem */
+	--size-2xl: calc(3 * var(--size-md)); /* 6rem */
+	--size-3xl: calc(5 * var(--size-md)); /* 10rem */
 
 
-	font-family: 'Sentient', serif;
+	font-family: var(--font-serif);
 	font-weight: 300;
 	font-style: normal;
 	font-size: 1.2rem;
@@ -49,18 +52,19 @@ Also think about better organization and whether there is a better way to nest t
 }
 
 
-h1, h4 {
-	font-family: 'Switzer', sans-serif;
-	font-weight: 700;
-	font-style: normal;
-}
-
 h2 {
-	font-family: 'Sentient', serif;
+	font-family: var(--font-serif);
 	font-weight: 500;
 	font-style: normal;
 	font-size: 1.8rem;
 	letter-spacing: 0.2rem;
+}
+
+h4 {
+	font-family: var(--font-sans);
+	font-weight: 700;
+	font-style: normal;
+	font-size: 1rem;
 }
 
 h3, summary {
@@ -71,9 +75,6 @@ h3, summary {
 	letter-spacing: 0.1rem;
 }
 
-h4 {
-	font-size: 1rem;
-}
 
 a[href*='.pdf']{
 	font-weight: 500;
