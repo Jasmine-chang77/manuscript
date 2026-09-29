@@ -16,6 +16,25 @@ the font package instructions to import their stylesheets into my main CSS. */
 Also think about better organization and whether there is a better way to nest the code. */
 
 :root {
+	/* Color */
+	--color-pr: mediumblue;
+	--color-res: salmon;
+	--color-bg: cornsilk;
+	--color-accent1: orangered;
+	--color-accent2: lightsalmon;
+	--color-accent3: cornflowerblue;
+
+	/* Font */
+	--font-serif: 'Sentient', serif;
+	--font-sans: 'Switzer', sans-serif;
+
+	/* Size */
+	--size-sm: 1rem;
+	--size-md: 2rem;
+	--size-lg: 3rem;
+	--size-xl: calc(2 * var(--size-md));
+
+
 	font-family: 'Sentient', serif;
 	font-weight: 300;
 	font-style: normal;
@@ -154,7 +173,7 @@ main {
 
 	aside, dl {
 		margin-block: 4rem;
-		min-inline-size: 40rem;
+		min-inline-size: 40rem; /* use ch, character numbers */
 		margin-inline-start: 20rem;
 		margin-inline-end: 10rem;
 	}
@@ -172,6 +191,7 @@ main {
 
 /* All .class selectors below here. */
 
+/* Header class */
 /* I used 90vh because I wanted people to see the almost full cover when they first open the website. */
 .hero {
     position: relative;
@@ -226,6 +246,7 @@ and make the typography work more like an image. */
     line-height: 1;
 }
 
+/* <em> class */
 .humanist {
 	font-family: 'linotype-sabon', serif;
 	font-weight: 700;
@@ -251,6 +272,7 @@ and make the typography work more like an image. */
 	font-size: 1.05rem;
 }
 
+/* classification class */
 .classification dd {
 	font-family: 'Switzer', sans-serif;
 	font-weight: 400;
@@ -260,7 +282,6 @@ and make the typography work more like an image. */
 	margin-block: -1.2rem;
 
 }
-
 .class-humanist {
 	font-family: 'linotype-sabon', serif;
 	font-weight: 400;
@@ -303,6 +324,7 @@ and make the typography work more like an image. */
 	font-size: 3.2rem;
 }
 
+/* Appendix class */
 .typeface-credit {
 	line-height: 0.8;
     margin-block-end: 2rem;
