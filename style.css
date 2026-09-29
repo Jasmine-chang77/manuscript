@@ -37,18 +37,12 @@ Also think about better organization and whether there is a better way to nest t
 	--size-2xl: calc(3 * var(--size-md)); /* 6rem */
 	--size-3xl: calc(5 * var(--size-md)); /* 10rem */
 
-
-	font-family: var(--font-serif);
-	font-weight: 300;
-	font-style: normal;
-	font-size: 1.2rem;
-	line-height: 1.8;
-	margin-block: 6rem;
-	margin-inline: 10rem;
+	margin-block: var(--size-2xl);
+	margin-inline: var(--size-3xl);
 }
 
 * + * {
-	margin-block-start: 1rem;
+	margin-block-start: var(--size-sm);
 }
 
 
@@ -65,10 +59,11 @@ h4 {
 	font-weight: 700;
 	font-style: normal;
 	font-size: 1rem;
+	letter-spacing: 0.1rem;
 }
 
 h3, summary {
-	font-family: 'Sentient', serif;
+	font-family: var(--font-serif);
 	font-weight: 500;
 	font-style: normal;
 	font-size: 1.2rem;
@@ -80,13 +75,18 @@ a[href*='.pdf']{
 	font-weight: 500;
 	text-decoration-line: underline;
 	&::after { content: ' »'; }
-	&:hover { color: salmon }
+	&:hover { color: var(--color-res); }
 }
 
 
 body {
-	background-color: cornsilk;
-	color: mediumblue;
+	background-color: var(--color-bg);
+	color: var(--color-pr);
+	font-family: var(--font-serif);
+	font-weight: 300;
+	font-style: normal;
+	font-size: calc(1.2 * var(--size-sm));
+	line-height: 1.8;
 
 	hgroup {
 		font-family: 'Sentient', serif;
