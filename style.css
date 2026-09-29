@@ -76,6 +76,10 @@ body {
 		line-height: 1;
 	}
 
+	header p {
+		line-height: 1;
+	}
+
 	nav {
 		font-size: 0.9rem;
 		line-height: 1;
@@ -150,7 +154,9 @@ main {
 
 	aside, dl {
 		margin-block: 4rem;
-		margin-inline: 10rem;
+		margin-inline-start: 25rem;
+		margin-inline-end: 10rem;
+		min-inline-size: 36rem;
 	}
 
 	blockquote {
@@ -175,7 +181,7 @@ main {
 and make the typography work more like an image. */
 .hero hgroup {
     position: absolute;
-    inset-inline-start: 12rem;
+    inset-inline-start: 11rem;
 	inset-block-start: 3.5rem;
 
 	h1 {
@@ -192,7 +198,7 @@ and make the typography work more like an image. */
 }
 .book-info {
     position: absolute;
-    inset-inline-start: 40rem;
+    inset-inline-start: 39rem;
     inset-block-start: 22rem;
     font-family: 'Switzer', sans-serif;
 	font-weight: 400;
@@ -202,7 +208,7 @@ and make the typography work more like an image. */
 .hero::before {
     content: ' “';
     position: absolute;
-    inset-inline-start: -14rem;
+    inset-inline-start: -15rem;
     inset-block-start: -12rem;
     font-family: 'Switzer', serif;
 	font-weight: 700;
@@ -212,7 +218,7 @@ and make the typography work more like an image. */
 .hero::after {
     content: ' ”';
     position: absolute;
-    inset-inline-start: 42rem;
+    inset-inline-start: 41rem;
     inset-block-start: 16rem;
     font-family: 'Switzer', serif;
 	font-weight: 700;
