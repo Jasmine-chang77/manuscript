@@ -22,7 +22,7 @@ Also think about better organization and whether there is a better way to nest t
 	font-size: 1.2rem;
 	line-height: 1.8;
 	margin-block: 6rem;
-	margin-inline: 8rem;
+	margin-inline: 10rem;
 }
 
 * + * {
@@ -150,7 +150,7 @@ main {
 
 	aside, dl {
 		margin-block: 4rem;
-		margin-inline: 8rem;
+		margin-inline: 10rem;
 	}
 
 	blockquote {
