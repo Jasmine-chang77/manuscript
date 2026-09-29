@@ -1,5 +1,9 @@
 /* I downloaded Sentient and Switzer from Fontshare and followed
 the font package instructions to import their stylesheets into my main CSS. */
+
+/* Based on the feedback, I checked the Fontshare license for Sentient and Switzer. The license allows the font files to be self-hosted for use on my own website, including through CSS @font-face. */
+/* https://www.fontshare.com/licenses/itf-free-font-license */
+
 @import url('sentient.css');
 @import url('switzer.css');
 /* I wanted to use the typefaces shown in the book for each type classification. Since Sabon, Futura, and Bodoni...etc. were easier to find on Adobe Fonts, I added them to an Adobe Fonts web project and imported the project link here. */
@@ -21,7 +25,7 @@ Also think about better organization and whether there is a better way to nest t
 	margin-inline: 8rem;
 }
 
-* * * {
+* + * {
 	margin-block-start: 1rem;
 }
 
@@ -30,12 +34,6 @@ h1, h4 {
 	font-family: 'Switzer-Bold', sans-serif;
 	font-weight: 700;
 	font-style: normal;
-}
-
-h1 {
-	font-family: 'Switzer-Extrabold', sans-serif;
-    font-size: 18rem;
-    line-height: 0.8;
 }
 
 h2 {
@@ -82,7 +80,28 @@ body {
 		line-height: 1;
 		margin-block-start: 4rem;
 		margin-block-end: 6rem;
-	}
+
+		/* I want to indent the navigation list, so I searched on MDN for how to do it. */
+		/* https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/text-indent */
+
+		/* I originally added the same class to every nested navigation item. Based on the feedback, I realized I could use the nested HTML structure as the CSS selector instead. */
+		/* ul ul li means an li that is inside a ul nested within another ul. */
+
+		ul ul li {
+			text-indent: 1.5em;
+
+			&::before {
+				content: '»';
+				margin-inline-end: 0.5em;
+			}
+		}
+
+		/* Spacing between two navigation groups */
+		 ul ul {
+			margin-block-start: 1rem;
+			margin-block-end: 2rem;
+		}
+
 
 	h2, h3, h4 {
 		line-height: 0.4;
@@ -97,6 +116,11 @@ body {
 		cursor: pointer;
 		list-style: none;
 		&::before { content: ' +'; margin-inline-end: 0.5em; }
+	}
+
+	footer {
+		border-block-start: 0.1rem solid mediumblue;
+		padding-block-start: 1rem;
 	}
 }
 
@@ -117,9 +141,13 @@ main {
 		font-style: normal;
 		font-size: 0.9rem;
 		color: salmon;
+
+		q {
+			font-style: italic;
+		}
 	}
 
-	aside, div {
+	aside, dl {
 		margin-block: 4rem;
 		margin-inline: 8rem;
 	}
@@ -133,9 +161,7 @@ main {
 	}
 }
 
-footer {
-	border-block-start: solid mediumblue 0.1rem;
-}
+
 
 /* All .class selectors below here. */
 
@@ -149,12 +175,16 @@ and make the typography work more like an image. */
 .hero hgroup {
     position: absolute;
     inset-inline-start: 12rem;
-	inset-block-start: 2rem;
+	inset-block-start: 3.5rem;
 
-	p {
-		font-family: 'Switzer-Regular', sans-serif;
+	h1 {
+		font-family: 'Switzer-Light', sans-serif;
 		font-size: 2.6rem;
 		line-height: 1;
+	}
+	span {
+		font-family: 'Switzer-Extrabold', sans-serif;
+		font-size: 18rem;
 	}
 }
 .book-info {
@@ -184,15 +214,6 @@ and make the typography work more like an image. */
     line-height: 1;
 }
 
-/* I want to indent the navigation list, so I searched on MDN for how to do it. */
-/* https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/text-indent */
-.indent-nav {
-	text-indent: 1em;
-	&::before {
-		content: ' »';
-		margin-inline-end: 0.5em;
-	}
-}
 .humanist {
 	font-family: 'linotype-sabon', serif;
 	font-weight: 700;
@@ -218,17 +239,14 @@ and make the typography work more like an image. */
 	font-size: 1.05rem;
 }
 
-.classification p {
+.classification dd {
 	font-family: 'Switzer-Regular', sans-serif;
 	font-weight: 400;
 	font-style: normal;
 	font-size: 0.6rem;
 	letter-spacing: 0.1rem;
 	margin-block: -1.2rem;
-}
-/* I used :nth-child(even) to select every even <p>, which is the typeface name, and add space after each typeface group. */
-.classification p:nth-child(even) {
-    margin-block-end: 1rem;
+
 }
 
 .class-humanist {
@@ -277,8 +295,8 @@ and make the typography work more like an image. */
 	line-height: 0.8;
     margin-block-end: 2rem;
 
-	h5 {
-		margin-block-end: 1rem;
+	dt {
+		margin-block-start: 2rem;
 	}
 	a {
 		font-family: 'Sentient-Regular', serif;
@@ -288,4 +306,5 @@ and make the typography work more like an image. */
 		&::after { content: ' »'; }
 		&:hover { color: salmon }
 	}
+
 }

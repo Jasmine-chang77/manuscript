@@ -11,18 +11,15 @@
 
 		<header>
 
-			<div class="hero">
+			<section class="hero">
 				<!-- I learned that <cite> is used to mark the title of a creative work, such as a book. -->
 				<!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/cite -->
 				<hgroup>
-					<p>thinking with</p>
-					<h1>type</h1>
+					<h1>thinking with <span>type</span></h1>
 				</hgroup>
 
-				<div class="book-info">
-					<p>Ellen Lupton, 2010</p>
-				</div>
-			</div>
+				<p class="book-info">Ellen Lupton, 2010</p>
+			</section>
 
 			<p><a href="https://readings.design/PDF/thinkingwithtype_ellenlupton.pdf"><cite>thinking with type</cite></a></p>
 
@@ -34,19 +31,19 @@
 						<a href="#letter">Letter</a>
 
 						<ul>
-							<li class="indent-nav"><a href="#type-as-program-and-narrative">Type as program & narrative</a></li>
-							<li class="indent-nav"><a href="#type-classification">Type Classification</a></li>
-							<li class="indent-nav"><a href="#typeface-on-screen">Typeface on screen</a></li>
+							<li><a href="#type-as-program-and-narrative">Type as program & narrative</a></li>
+							<li><a href="#type-classification">Type Classification</a></li>
+							<li><a href="#typeface-on-screen">Typeface on screen</a></li>
 						</ul>
 					</li>
 					<li>
 						My Response
 
 						<ul>
-							<li class="indent-nav"><a href="#we-see-type.-we-read-type.">We see type. We read type.</a></li>
-							<li class="indent-nav"><a href="#there-are-no-bad-typeface,-but-only-bad-decision.">There are no bad typeface, but only bad decision.</a></li>
-							<li class="indent-nav"><a href="#the-same-letter-can-fell-different.">The same letter can fell different.</a></li>
-							<li class="indent-nav"><a href="#the-only-limitations-are-in-our-expectations.">The only limitations are in our expectations.</a></li>
+							<li><a href="#we-see-type.-we-read-type.">We see type. We read type.</a></li>
+							<li><a href="#there-are-no-bad-typeface-but-only-bad-decision.">There are no bad typeface, but only bad decision.</a></li>
+							<li><a href="#the-same-letter-can-fell-different.">The same letter can fell different.</a></li>
+							<li><a href="#the-only-limitations-are-in-our-expectations.">The only limitations are in our expectations.</a></li>
 						</ul>
 					</li>
 				</ul>
@@ -118,7 +115,7 @@
 
 					<!-- Response part two -->
 
-					<aside id="there-are-no-bad-typeface,-but-only-bad-decision.">
+					<aside id="there-are-no-bad-typeface-but-only-bad-decision.">
 						<h4>There are no bad typeface, but only bad decision.</h4>
 
 						<p>I believe different typefaces carry different meanings and feelings. There are not necessarily bad typefaces, but there can be bad decisions—it is more about whether the choice is appropriate for the content. I also think the feeling of a typeface can come from its history. The way a typeface looks is often connected to the time and technology in which it was created.</p>
@@ -127,9 +124,11 @@
 						<!-- After receiving feedback, I started thinking about how I could use more appropriate inline elements to enrich the text, so I use <span> here to separate specific text that I want to style differently. -->
 						<!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/span -->
 
-						<p>For example, for an essay or newspaper, we may prefer <span class="humanist">Humanist</span> or <span class="transitional">Transitional</span> typefaces because they can give the text a more traditional and formal feeling. One example that came to my mind is <a href="https://www.nytimes.com/">The New York Times</a>, which uses serif typography throughout the publication.For fashion magazines, especially publications such as <a href="https://www.vogue.com/">Vogue</a>, <span class="modern">Modern</span> typefaces are often used for titles because their strong contrast between thick and thin strokes creates a more elegant and sophisticated feeling. On the other hand, technology brands such as <a href="https://design.google/library/evolving-google-identity">Google</a> often use <span class="geometric">Geometric sans serif</span> typefaces, which can communicate a sense of precision and the beauty of mathematical forms. And these associations are not only created by the shapes themselves, but also by the history behind them. Geometric San Serif typefaces, for example, became closely connected with modernism and a period when designers were moving away from traditional forms and starting to look toward a more mechanical and modern visual language.</p>
+						<p>For example, for an essay or newspaper, we may prefer <em class="humanist">Humanist</em> or <em class="transitional">Transitional</em> typefaces because they can give the text a more traditional and formal feeling. One example that came to my mind is <a href="https://www.nytimes.com/">The New York Times</a>, which uses serif typography throughout the publication.For fashion magazines, especially publications such as <a href="https://www.vogue.com/">Vogue</a>, <em class="modern">Modern</em> typefaces are often used for titles because their strong contrast between thick and thin strokes creates a more elegant and sophisticated feeling. On the other hand, technology brands such as <a href="https://design.google/library/evolving-google-identity">Google</a> often use <em class="geometric">Geometric sans serif</em> typefaces, which can communicate a sense of precision and the beauty of mathematical forms. And these associations are not only created by the shapes themselves, but also by the history behind them. Geometric San Serif typefaces, for example, became closely connected with modernism and a period when designers were moving away from traditional forms and starting to look toward a more mechanical and modern visual language.</p>
 
-						<p>Of course, these choices should still be made with legibility and readability  in mind. What I find interesting is that choosing a typeface can be similar to choosing the cover of a book. Sometimes, the first impression is already enough to communicate something about the content before we actually start reading.  At the same time, I think these impressions come from both the visual form of a typeface and what we have learned to associate with it over time. Just as Lupton states, “There is no playbook that assigns a fixed meaning or function to every typeface.” To me, this means that understanding the history and characteristics of a typeface can help us make a decision, but it does not mean there is only one correct way to use it.</p>
+						<!-- Based on the feedback, I looked up <q> on MDN and learned that it can be used for a short quote within a paragraph. I found this interesting, when using <q>, we normally don't need to add quotation marks because they will be added automatically. -->
+						<!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/q -->
+						<p>Of course, these choices should still be made with legibility and readability  in mind. What I find interesting is that choosing a typeface can be similar to choosing the cover of a book. Sometimes, the first impression is already enough to communicate something about the content before we actually start reading.  At the same time, I think these impressions come from both the visual form of a typeface and what we have learned to associate with it over time. Just as Lupton states, <q>There is no playbook that assigns a fixed meaning or function to every typeface.</q> To me, this means that understanding the history and characteristics of a typeface can help us make a decision, but it does not mean there is only one correct way to use it.</p>
 					</aside>
 
 				</section>
@@ -165,28 +164,31 @@
 					<!-- I wanted to show each type classification in the actual typeface used as an example in the book. I used <div> to group these examples together so I can style them as one group. -->
 					<!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/div -->
 
-					<div class="classification">
-						<p><span class="class-humanist">Humanist</span></p>
-						<p>SABON</p>
+					<!-- Based on the feedback, I took a look at how <dl> (represents a description list) is used on MDN. I think <dt> works well for showing each type classification, while <dd> describes which typeface is used as the example. -->
+					<!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/dl -->
 
-						<p><span class="class-transitional">Transitional</span></p>
-						<p>BASKERVVILLE</p>
+					<dl class="classification">
+						<dt class="class-humanist">Humanist</dt>
+						<dd>SABON</dd>
 
-						<p><span class="class-modern">Modern</span></p>
-						<p>BODONI</p>
+						<dt class="class-transitional">Transitional</>
+						<dd>BASKERVVILLE</dd>
 
-						<p><span class="class-slab-serif">Slab Serif</span></p>
-						<p>CLARENDON</p>
+						<dt class="class-modern">Modern</dt>
+						<dd>BODONI</dd>
 
-						<p><span class="class-humanist-sans">Humanist Sans Serif</span></p>
-						<p>GILL SANS</p>
+						<dt class="class-slab-serif">Slab Serif</>
+						<dd>CLARENDON</dd>
 
-						<p><span class="class-transitional-sans">Transitional Sans Serif</span></p>
-						<p>HELVETICA</p>
+						<dt class="class-humanist-sans">Humanist Sans Serif</>
+						<dd>GILL SANS</dd>
 
-						<p><span class="class-geometric-sans">Geometric Sans Serif</span></p>
-						<p>FUTURA</p>
-					</div>
+						<dt class="class-transitional-sans">Transitional Sans Serif</dt>
+						<dd>HELVETICA</dd>
+
+						<dt class="class-geometric-sans">Geometric Sans Serif</></dt>
+						<dd>FUTURA</dd>
+					</dl>
 
 				</section>
 
@@ -231,90 +233,93 @@
 			<details>
 				<summary>Typefaces & Attribution</summary>
 
-				<div class="typeface-credit">
-					<h5>
+				<!-- I also used <dl> here because each typeface name is a term followed by information describing its designer, foundry, and use. -->
+
+				<dl class="typeface-credit">
+					<dt>
 						<a href="https://www.fontshare.com/fonts/sentient">Sentient</a>
-					</h5>
-					<p>Noopur Choksi · Indian Type Foundry</p>
-					<p>Body Typeface</p>
-				</div>
+					</dt>
+					<dd>Noopur Choksi · Indian Type Foundry</dd>
+					<dd>Body Typeface</dd>
 
-				<div class="typeface-credit">
-					<h5>
+					<dt>
 						<a href="https://www.fontshare.com/fonts/switzer">Switzer</a>
-					</h5>
-					<p>Jérémie Hornus · Indian Type Foundry</p>
-					<p>Response Typeface</p>
-				</div>
+					</dt>
+					<dd>Jérémie Hornus · Indian Type Foundry</dd>
+					<dd>Response Typeface</dd>
 
-				<div class="typeface-credit">
-					<h5>
+					<dt>
 						<a href="https://fonts.adobe.com/fonts/sabon">Sabon</a>
-					</h5>
-					<p>Jan Tschichold · Monotype</p>
-					<p>Type Classification—Humanist</p>
-				</div>
+					</dt>
+					<dd>Jan Tschichold · Monotype</dd>
+					<dd>Type Classification—Humanist</dd>
 
-				<div class="typeface-credit">
-					<h5>
+					<dt>
 						<a href="https://fonts.adobe.com/fonts/baskerville">Baskerville</a>
-					</h5>
-					<p>H. Berthold · Monotype</p>
-					<p>Type Classification—Transitional</p>
-				</div>
+					</dt>
+					<dd>H. Berthold · Monotype</dd>
+					<dd>Type Classification—Transitional</dd>
 
-				<div class="typeface-credit">
-					<h5>
+					<dt>
+						<a href="https://fonts.adobe.com/fonts/baskerville">Baskerville</a>
+					</dt>
+					<dd>H. Berthold · Monotype</dd>
+					<dd>Type Classification—Transitional</dd>
+
+					<dt>
 						<a href="https://fonts.adobe.com/fonts/bodoni">Bodoni</a>
-					</h5>
-					<p>Gert Wiescher & Morris Fuller Benton · Monotype</p>
-					<p>Type Classification—Modern</p>
-				</div>
+					</dt>
+					<dd>Gert Wiescher & Morris Fuller Benton · Monotype</dd>
+					<dd>Type Classification—Modern</dd>
 
-				<div class="typeface-credit">
-					<h5>
+					<dt>
+						<a href="https://fonts.adobe.com/fonts/bodoni">Bodoni</a>
+					</dt>
+					<dd>Gert Wiescher & Morris Fuller Benton · Monotype</dd>
+					<dd>Type Classification—Modern</dd>
+
+					<dt>
 						<a href="https://fonts.adobe.com/fonts/clarendon-urw">Clarendon URW</a>
-					</h5>
-					<p>URW Type Foundry</p>
-					<p>Type Classification—Slab Serif</p>
-				</div>
+					</dt>
+					<dd>URW Type Foundry</dd>
+					<dd>Type Classification—Slab Serif</dd>
 
-				<div class="typeface-credit">
-					<h5>
+					<dt>
+						<a href="https://fonts.adobe.com/fonts/clarendon-urw">Clarendon URW</a>
+					</dt>
+					<dd>URW Type Foundry</dd>
+					<dd>Type Classification—Slab Serif</dd>
+
+					<dt>
 						<a href="https://fonts.adobe.com/fonts/gill-sans-nova">Gill Sans Nova</a>
-					</h5>
-					<p>Eric Gill & George Ryan · Monotype</p>
-					<p>Type Classification—Humanist Sans Serif</p>
-				</div>
+					</dt>
+					<dd>Eric Gill & George Ryan · Monotype</dd>
+					<dd>Type Classification—Humanist Sans Serif</dd>
 
-				<div class="typeface-credit">
-					<h5>
+					<dt>
 						<a href="https://fonts.adobe.com/fonts/helvetica">Helvetica</a>
-					</h5>
-					<p>Linotype Design Studio & Max Miedinger · Monotype</p>
-					<p>Type Classification—Transitional Sans Serif</p>
-				</div>
+					</dt>
+					<dd>Linotype Design Studio & Max Miedinger · Monotype</dd>
+					<dd>Type Classification—Transitional Sans Serif</dd>
 
-				<div class="typeface-credit">
-					<h5>
+					<dt>
 						<a href="https://fonts.adobe.com/fonts/futura-pt">Futura PT</a>
-					</h5>
-					<p>Isabella Chaeva, Paul Renner, Vladimir Andrich & Vladimir Yefimov · Paratype</p>
-					<p>Type Classification—Geometric Sans Serif</p>
-				</div>
+					</dt>
+					<dd>Isabella Chaeva, Paul Renner, Vladimir Andrich & Vladimir Yefimov · Paratype</dd>
+					<dd>Type Classification—Geometric Sans Serif</dd>
+				</dl>
 
-			</details>
 		</section>
 
+		<footer>
+			<p>Jasmine Chang</p>
+			<p>Typography & Interaction · Fall 2026</p>
+			<a href="#top">Back to top ↑</a>
+
+			<!-- I referenced the example and learned from MDN that href="#top" can be used to link back to the top of the current page. -->
+			<!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/a -->
+		</footer>
+
 	</body>
-
-	<footer>
-		<p>Jasmine Chang</p>
-		<p>Typography & Interaction · Fall 2026</p>
-		<a href="#top">Back to top ↑</a>
-
-		<!-- I referenced the example and learned from MDN that href="#top" can be used to link back to the top of the current page. -->
-		<!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/a -->
-	</footer>
 
 </html>
