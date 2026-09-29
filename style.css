@@ -16,7 +16,7 @@ the font package instructions to import their stylesheets into my main CSS. */
 Also think about better organization and whether there is a better way to nest the code. */
 
 :root {
-	font-family: 'Sentient-Light', serif;
+	font-family: 'Sentient', serif;
 	font-weight: 300;
 	font-style: normal;
 	font-size: 1.2rem;
@@ -31,13 +31,13 @@ Also think about better organization and whether there is a better way to nest t
 
 
 h1, h4 {
-	font-family: 'Switzer-Bold', sans-serif;
+	font-family: 'Switzer', sans-serif;
 	font-weight: 700;
 	font-style: normal;
 }
 
 h2 {
-	font-family: 'Sentient-Medium', serif;
+	font-family: 'Sentient', serif;
 	font-weight: 500;
 	font-style: normal;
 	font-size: 1.8rem;
@@ -45,7 +45,7 @@ h2 {
 }
 
 h3, summary {
-	font-family: 'Sentient-Medium', serif;
+	font-family: 'Sentient', serif;
 	font-weight: 500;
 	font-style: normal;
 	font-size: 1.2rem;
@@ -57,6 +57,7 @@ h4 {
 }
 
 a[href*='.pdf']{
+	font-weight: 500;
 	text-decoration-line: underline;
 	&::after { content: ' »'; }
 	&:hover { color: salmon }
@@ -68,7 +69,7 @@ body {
 	color: mediumblue;
 
 	hgroup {
-		font-family: 'Sentient-Regular', serif;
+		font-family: 'Sentient', serif;
 		font-weight: 400;
 		font-style: normal;
 		font-size: 1.4rem;
@@ -101,7 +102,7 @@ body {
 			margin-block-start: 1rem;
 			margin-block-end: 2rem;
 		}
-
+	}
 
 	h2, h3, h4 {
 		line-height: 0.4;
@@ -126,7 +127,7 @@ body {
 
 main {
 	a {
-		font-style: 'Switzer-Italic', sans-serif;
+		font-style: 'Switzer', sans-serif;
 		font-weight: 400;
 		font-style: italic;
 		color: orangered;
@@ -136,7 +137,7 @@ main {
 	}
 
 	aside {
-		font-family: 'Switzer-Regular', sans-serif;
+		font-family: 'Switzer', sans-serif;
 		font-weight: 400;
 		font-style: normal;
 		font-size: 0.9rem;
@@ -153,8 +154,8 @@ main {
 	}
 
 	blockquote {
-		font-family: 'Sentient-Light', serif;
-		font-weight: 300;
+		font-family: 'Sentient', serif;
+		font-weight: 400;
 		font-style: normal;
 		font-size: 1.8rem;
 		line-height: 1.4;
@@ -178,12 +179,14 @@ and make the typography work more like an image. */
 	inset-block-start: 3.5rem;
 
 	h1 {
-		font-family: 'Switzer-Light', sans-serif;
+		font-family: 'Switzer', sans-serif;
+		font-weight: 400;
 		font-size: 2.6rem;
-		line-height: 1;
+		line-height: 0.9;
 	}
 	span {
-		font-family: 'Switzer-Extrabold', sans-serif;
+		font-family: 'Switzer', sans-serif;
+		font-weight: 700;
 		font-size: 18rem;
 	}
 }
@@ -191,7 +194,8 @@ and make the typography work more like an image. */
     position: absolute;
     inset-inline-start: 40rem;
     inset-block-start: 22rem;
-    font-family: 'Switzer-Regular', sans-serif;
+    font-family: 'Switzer', sans-serif;
+	font-weight: 400;
     font-size: 1rem;
     line-height: 0.8;
 }
@@ -200,7 +204,8 @@ and make the typography work more like an image. */
     position: absolute;
     inset-inline-start: -14rem;
     inset-block-start: -12rem;
-    font-family: 'Switzer-Bold', serif;
+    font-family: 'Switzer', serif;
+	font-weight: 700;
     font-size: 38rem;
     line-height: 1;
 }
@@ -209,7 +214,8 @@ and make the typography work more like an image. */
     position: absolute;
     inset-inline-start: 42rem;
     inset-block-start: 16rem;
-    font-family: 'Switzer-Bold', serif;
+    font-family: 'Switzer', serif;
+	font-weight: 700;
     font-size: 38rem;
     line-height: 1;
 }
@@ -233,14 +239,14 @@ and make the typography work more like an image. */
 	font-size: 1.1rem;
 }
 .geometric {
-	font-family: futura-pt, sans-serif;
+	font-family: 'futura-pt', sans-serif;
 	font-weight: 600;
 	font-style: normal;
 	font-size: 1.05rem;
 }
 
 .classification dd {
-	font-family: 'Switzer-Regular', sans-serif;
+	font-family: 'Switzer', sans-serif;
 	font-weight: 400;
 	font-style: normal;
 	font-size: 0.6rem;
@@ -299,7 +305,7 @@ and make the typography work more like an image. */
 		margin-block-start: 2rem;
 	}
 	a {
-		font-family: 'Sentient-Regular', serif;
+		font-family: 'Sentient', serif;
 		font-weight: 400;
 		font-style: normal;
 		text-decoration-line: underline;
