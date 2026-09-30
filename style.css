@@ -274,55 +274,44 @@ and make the typography work more like an image. */
 }
 
 /* classification class */
-.classification dd {
-	font-family: var(--font-sans);
-	font-weight: 400;
-	font-style: normal;
-	font-size: calc(0.6 * var(--size-sm));
-	letter-spacing: var(--size-2xs);
-	margin-block: -1.2rem;
+.classification {
+	dd {
+		font-family: var(--font-sans);
+		font-weight: 400;
+		font-style: normal;
+		font-size: calc(0.6 * var(--size-sm));
+		letter-spacing: var(--size-2xs);
+		margin-block: -1.2rem;
+	}
 
-}
-.class-humanist {
-	font-family: 'linotype-sabon', serif;
-	font-weight: 400;
-	font-style: normal;
-	font-size: 3rem;
-}
-.class-transitional {
-	font-family: 'berthold-baskerville-pro', serif;
-	font-weight: 400;
-	font-style: normal;
-	font-size: 3rem;
-}
-.class-modern {
-	font-family: 'bodoni-std', serif;
-	font-weight: 400;
-	font-style: normal;
-	font-size: 3rem;
-}
-.class-slab-serif {
-	font-family: 'clarendon-urw', serif;
-	font-weight: 400;
-	font-style: normal;
-	font-size: 3rem;
-}
-.class-humanist-sans {
-	font-family: 'gill-sans-nova', serif;
-	font-weight: 400;
-	font-style: normal;
-	font-size: 3rem;
-}.class-transitional-sans {
-	font-family: 'helvetica-lt-pro', sans-serif;
-	font-weight: 400;
-	font-style: normal;
-	font-size: calc(2.8 * var(--size-sm));
-}
-.class-geometric-sans {
-	font-family: 'futura-pt', serif;
-	font-weight: 400;
-	font-style: normal;
-	font-size: 3rem;
+	dt {
+		font-weight: 400;
+        font-style: normal;
+        font-size: var(--size-lg);
+	}
+
+	.class-humanist {
+		font-family: 'linotype-sabon', serif;
+	}
+	.class-transitional {
+		font-family: 'berthold-baskerville-pro', serif;
+	}
+	.class-modern {
+		font-family: 'bodoni-std', serif;
+	}
+	.class-slab-serif {
+		font-family: 'clarendon-urw', serif;
+	}
+	.class-humanist-sans {
+		font-family: 'gill-sans-nova', serif;
+	}
+	.class-transitional-sans {
+		font-family: 'helvetica-lt-pro', sans-serif;
+		font-size: calc(2.8 * var(--size-sm));
+	}
+	.class-geometric-sans {
+		font-family: 'futura-pt', serif;
+	}
 }
 
 /* Appendix class */
