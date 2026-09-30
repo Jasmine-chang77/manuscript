@@ -29,6 +29,7 @@ Also think about better organization and whether there is a better way to nest t
 	--font-sans: 'Switzer', sans-serif;
 
 	/* Size */
+	--size-2xs: calc(var(--size-sm) / 10); /* 0.1rem */
 	--size-xs: calc(var(--size-sm) / 2); /* 0.5rem */
 	--size-sm: 1rem;
 	--size-md: 2rem;
@@ -50,25 +51,26 @@ h2 {
 	font-family: var(--font-serif);
 	font-weight: 500;
 	font-style: normal;
-	font-size: 1.8rem;
-	letter-spacing: 0.2rem;
-}
-
-h4 {
-	font-family: var(--font-sans);
-	font-weight: 700;
-	font-style: normal;
-	font-size: 1rem;
-	letter-spacing: 0.1rem;
+	font-size: calc(1.8 * var(--size-sm));
+	letter-spacing: var(--size-2xs);
 }
 
 h3, summary {
 	font-family: var(--font-serif);
 	font-weight: 500;
 	font-style: normal;
-	font-size: 1.2rem;
-	letter-spacing: 0.1rem;
+	font-size: calc(1.2 * var(--size-sm));
+	letter-spacing: var(--size-2xs);
 }
+
+h4 {
+	font-family: var(--font-sans);
+	font-weight: 700;
+	font-style: normal;
+	font-size: var(--size-sm);
+	letter-spacing: var(--size-2xs);
+}
+
 
 
 a[href*='.pdf']{
@@ -89,10 +91,10 @@ body {
 	line-height: 1.8;
 
 	hgroup {
-		font-family: 'Sentient', serif;
+		font-family: var(--font-serif);
 		font-weight: 400;
 		font-style: normal;
-		font-size: 1.4rem;
+		font-size: calc(1.4 * var(--size-sm));
 		line-height: 1;
 	}
 
@@ -103,8 +105,8 @@ body {
 	nav {
 		font-size: 0.9rem;
 		line-height: 1;
-		margin-block-start: 4rem;
-		margin-block-end: 6rem;
+		margin-block-start: var(--size-xl);
+		margin-block-end: var(--size-2xl);
 
 		/* I want to indent the navigation list, so I searched on MDN for how to do it. */
 		/* https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/text-indent */
@@ -117,14 +119,14 @@ body {
 
 			&::before {
 				content: '»';
-				margin-inline-end: 0.5em;
+				margin-inline-end: var(--size-xs);
 			}
 		}
 
 		/* Spacing between two navigation groups */
 		 ul ul {
-			margin-block-start: 1rem;
-			margin-block-end: 2rem;
+			margin-block-start: var(--size-sm);
+			margin-block-end: var(--size-md);
 		}
 	}
 
@@ -133,39 +135,39 @@ body {
 	}
 
 	section {
-		padding-block: 1rem;
-		margin-block-end: 2rem;
+		padding-block: var(--size-sm);
+		margin-block-end: var(--size-md);
 	}
 
 	summary {
 		cursor: pointer;
 		list-style: none;
-		&::before { content: ' +'; margin-inline-end: 0.5em; }
+		&::before { content: ' +'; margin-inline-end: var(--size-xs); }
 	}
 
 	footer {
-		border-block-start: 0.1rem solid mediumblue;
-		padding-block-start: 1rem;
+		border-block-start: var(--size-2xs) solid var(--color-pr);
+		padding-block-start: var(--size-sm);
 	}
 }
 
 main {
 	a {
-		font-style: 'Switzer', sans-serif;
+		font-style: var(--font-sans);
 		font-weight: 400;
 		font-style: italic;
-		color: orangered;
-		background-color: lightsalmon;
+		color: var(--color-accent1);
+		background-color: var(--color-accent2);
 		padding-inline: 0.2rem;
-		&:hover { color: mediumblue;background-color: cornflowerblue; }
+		&:hover { color: var(--color-pr); background-color: var(--color-accent3); }
 	}
 
 	aside {
-		font-family: 'Switzer', sans-serif;
+		font-family: var(--font-sans);
 		font-weight: 400;
 		font-style: normal;
 		font-size: 0.9rem;
-		color: salmon;
+		color: var(--color-res);
 
 		q {
 			font-style: italic;
@@ -173,14 +175,14 @@ main {
 	}
 
 	aside, dl {
-		margin-block: 4rem;
+		margin-block: var(--size-xl);
 		min-inline-size: 40rem; /* use ch, character numbers */
 		margin-inline-start: 20rem;
 		margin-inline-end: 10rem;
 	}
 
 	blockquote {
-		font-family: 'Sentient', serif;
+		font-family: var(--font-serif);
 		font-weight: 400;
 		font-style: normal;
 		font-size: 1.8rem;
@@ -206,13 +208,12 @@ and make the typography work more like an image. */
 	inset-block-start: 3.5rem;
 
 	h1 {
-		font-family: 'Switzer', sans-serif;
+		font-family: var(--font-sans);
 		font-weight: 400;
 		font-size: 2.6rem;
 		line-height: 0.9;
 	}
 	span {
-		font-family: 'Switzer', sans-serif;
 		font-weight: 700;
 		font-size: 18rem;
 	}
@@ -221,17 +222,16 @@ and make the typography work more like an image. */
     position: absolute;
     inset-inline-start: 39rem;
     inset-block-start: 22rem;
-    font-family: 'Switzer', sans-serif;
+    font-family: var(--font-sans);
 	font-weight: 400;
-    font-size: 1rem;
-    line-height: 0.8;
+    font-size: var(--size-sm);
 }
 .hero::before {
     content: ' “';
     position: absolute;
     inset-inline-start: -15rem;
     inset-block-start: -12rem;
-    font-family: 'Switzer', serif;
+    font-family: var(--font-sans);
 	font-weight: 700;
     font-size: 38rem;
     line-height: 1;
@@ -241,7 +241,7 @@ and make the typography work more like an image. */
     position: absolute;
     inset-inline-start: 41rem;
     inset-block-start: 16rem;
-    font-family: 'Switzer', serif;
+    font-family: var(--font-sans);
 	font-weight: 700;
     font-size: 38rem;
     line-height: 1;
@@ -252,34 +252,34 @@ and make the typography work more like an image. */
 	font-family: 'linotype-sabon', serif;
 	font-weight: 700;
 	font-style: normal;
-	font-size: 1.05rem;
+	font-size: var(--size-sm);
 }
 .transitional {
 	font-family: 'berthold-baskerville-pro', serif;
 	font-weight: 700;
 	font-style: normal;
-	font-size: 1rem;
+	font-size: var(--size-sm);
 }
 .modern {
 	font-family: 'bodoni-std', serif;
 	font-weight: 700;
 	font-style: normal;
-	font-size: 1.1rem;
+	font-size: var(--size-sm);
 }
 .geometric {
 	font-family: 'futura-pt', sans-serif;
 	font-weight: 600;
 	font-style: normal;
-	font-size: 1.05rem;
+	font-size: var(--size-sm);
 }
 
 /* classification class */
 .classification dd {
-	font-family: 'Switzer', sans-serif;
+	font-family: var(--font-sans);
 	font-weight: 400;
 	font-style: normal;
-	font-size: 0.6rem;
-	letter-spacing: 0.1rem;
+	font-size: calc(0.6 * var(--size-sm));
+	letter-spacing: var(--size-2xs);
 	margin-block: -1.2rem;
 
 }
@@ -287,7 +287,7 @@ and make the typography work more like an image. */
 	font-family: 'linotype-sabon', serif;
 	font-weight: 400;
 	font-style: normal;
-	font-size: 3.2rem;
+	font-size: 3rem;
 }
 .class-transitional {
 	font-family: 'berthold-baskerville-pro', serif;
@@ -299,47 +299,47 @@ and make the typography work more like an image. */
 	font-family: 'bodoni-std', serif;
 	font-weight: 400;
 	font-style: normal;
-	font-size: 3.2rem;
+	font-size: 3rem;
 }
 .class-slab-serif {
 	font-family: 'clarendon-urw', serif;
 	font-weight: 400;
 	font-style: normal;
-	font-size: 3.2rem;
+	font-size: 3rem;
 }
 .class-humanist-sans {
 	font-family: 'gill-sans-nova', serif;
 	font-weight: 400;
 	font-style: normal;
-	font-size: 3.2rem;
+	font-size: 3rem;
 }.class-transitional-sans {
 	font-family: 'helvetica-lt-pro', sans-serif;
 	font-weight: 400;
 	font-style: normal;
-	font-size: 3rem;
+	font-size: calc(2.8 * var(--size-sm));
 }
 .class-geometric-sans {
 	font-family: 'futura-pt', serif;
 	font-weight: 400;
 	font-style: normal;
-	font-size: 3.2rem;
+	font-size: 3rem;
 }
 
 /* Appendix class */
 .typeface-credit {
 	line-height: 0.8;
-    margin-block-end: 2rem;
+    margin-block-end: var(--size-md);
 
 	dt {
-		margin-block-start: 2rem;
+		margin-block-start: var(--size-md);
 	}
 	a {
-		font-family: 'Sentient', serif;
+		font-family: var(--font-serif);
 		font-weight: 400;
 		font-style: normal;
 		text-decoration-line: underline;
 		&::after { content: ' »'; }
-		&:hover { color: salmon }
+		&:hover { color: var(--color-res); }
 	}
 
 }
