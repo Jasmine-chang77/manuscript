@@ -176,9 +176,7 @@ main {
 
 	aside, dl {
 		margin-block: var(--size-xl);
-		min-inline-size: 40rem; /* use ch, character numbers */
-		margin-inline-start: 20rem;
-		margin-inline-end: 10rem;
+		margin-inline-start: 30rem;
 	}
 
 	blockquote {
@@ -204,32 +202,33 @@ main {
 and make the typography work more like an image. */
 .hero hgroup {
     position: absolute;
-    inset-inline-start: 11rem;
+    inset-inline-start: 15rem;
 	inset-block-start: 3.5rem;
 
 	h1 {
 		font-family: var(--font-sans);
 		font-weight: 400;
-		font-size: 2.6rem;
+		font-size: 3rem;
 		line-height: 0.9;
 	}
 	span {
+		display: block;
 		font-weight: 700;
-		font-size: 18rem;
+		font-size: 21rem;
 	}
 }
 .book-info {
     position: absolute;
-    inset-inline-start: 39rem;
-    inset-block-start: 22rem;
+    inset-inline-start: 45rem;
+    inset-block-start: 25rem;
     font-family: var(--font-sans);
 	font-weight: 400;
-    font-size: var(--size-sm);
+    font-size: calc(1.5 * var(--size-sm));
 }
 .hero::before {
     content: ' “';
     position: absolute;
-    inset-inline-start: -15rem;
+    inset-inline-start: -12rem;
     inset-block-start: -12rem;
     font-family: var(--font-sans);
 	font-weight: 700;
@@ -239,8 +238,8 @@ and make the typography work more like an image. */
 .hero::after {
     content: ' ”';
     position: absolute;
-    inset-inline-start: 41rem;
-    inset-block-start: 16rem;
+    inset-inline-start: 52rem;
+    inset-block-start: 22rem;
     font-family: var(--font-sans);
 	font-weight: 700;
     font-size: 38rem;
