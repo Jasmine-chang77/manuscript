@@ -32,6 +32,7 @@ Also think about better organization and whether there is a better way to nest t
 	--size-2xs: calc(var(--size-sm) / 10); /* 0.1rem */
 	--size-xs: calc(var(--size-sm) / 2); /* 0.5rem */
 	--size-sm: 1rem;
+	--size-sm-md: 1.5rem;
 	--size-md: 2rem;
 	--size-lg: 3rem;
 	--size-xl: calc(2 * var(--size-md)); /* 4rem */
@@ -103,7 +104,7 @@ body {
 	}
 
 	nav {
-		font-size: 0.9rem;
+		font-size: calc(0.9 * var(--size-sm));
 		line-height: 1;
 		margin-block-start: var(--size-xl);
 		margin-block-end: var(--size-2xl);
@@ -115,7 +116,7 @@ body {
 		/* ul ul li means an li that is inside a ul nested within another ul. */
 
 		ul ul li {
-			text-indent: 1.5em;
+			text-indent: var(--size-sm-md);
 
 			&::before {
 				content: '»';
@@ -131,12 +132,17 @@ body {
 	}
 
 	h2, h3, h4 {
-		line-height: 0.4;
+		line-height: 1;
 	}
 
 	section {
 		padding-block: var(--size-sm);
 		margin-block-end: var(--size-md);
+
+		> p,
+		> blockquote {
+			max-inline-size: 100ch; /* reading width */
+		}
 	}
 
 	summary {
@@ -158,7 +164,7 @@ main {
 		font-style: italic;
 		color: var(--color-accent1);
 		background-color: var(--color-accent2);
-		padding-inline: 0.2rem;
+		padding-inline: calc(var(--size-sm) / 5);
 		&:hover { color: var(--color-pr); background-color: var(--color-accent3); }
 	}
 
@@ -166,15 +172,19 @@ main {
 		font-family: var(--font-sans);
 		font-weight: 400;
 		font-style: normal;
-		font-size: 0.9rem;
+		font-size: calc(0.9 * var(--size-sm));
 		color: var(--color-res);
+
+		max-inline-size: 85ch;  /* narrower response */
+		margin-inline-start: auto;  /* push to right */
+		margin-block: var(--size-xl);
 
 		q {
 			font-style: italic;
 		}
 	}
 
-	aside, dl {
+	dl {
 		margin-block: var(--size-xl);
 		margin-inline-start: 30rem;
 	}
@@ -183,7 +193,7 @@ main {
 		font-family: var(--font-serif);
 		font-weight: 400;
 		font-style: normal;
-		font-size: 1.8rem;
+		font-size: calc(1.8 * var(--size-sm));
 		line-height: 1.4;
 	}
 }
@@ -195,81 +205,79 @@ main {
 /* Header class */
 /* I used 90vh because I wanted people to see the almost full cover when they first open the website. */
 .hero {
-    position: relative;
-    min-block-size: 90vh;
+	position: relative;
+	min-block-size: 90vh;
 }
 /* I used position: absolute to freely arrange the type and quotation marks
 and make the typography work more like an image. */
 .hero hgroup {
-    position: absolute;
-    inset-inline-start: 15rem;
+	position: absolute;
+	inset-inline-start: 15rem;
 	inset-block-start: 3.5rem;
 
 	h1 {
 		font-family: var(--font-sans);
 		font-weight: 400;
-		font-size: 3rem;
+		font-size: var(--size-lg);
 		line-height: 0.9;
 	}
 	span {
 		display: block;
 		font-weight: 700;
-		font-size: 21rem;
+		font-size: calc(7 * var(--size-lg));
 	}
 }
 .book-info {
-    position: absolute;
-    inset-inline-start: 45rem;
-    inset-block-start: 25rem;
-    font-family: var(--font-sans);
+	position: absolute;
+	inset-inline-start: 45rem;
+	inset-block-start: 25rem;
+	font-family: var(--font-sans);
 	font-weight: 400;
-    font-size: calc(1.5 * var(--size-sm));
+	font-size: var(--size-sm-md);
 }
 .hero::before {
-    content: ' “';
-    position: absolute;
-    inset-inline-start: -12rem;
-    inset-block-start: -12rem;
-    font-family: var(--font-sans);
+	content: ' “';
+	position: absolute;
+	inset-inline-start: -12rem;
+	inset-block-start: -12rem;
+	font-family: var(--font-sans);
 	font-weight: 700;
-    font-size: 38rem;
-    line-height: 1;
+	font-size: 38rem;
+	line-height: 1;
 }
 .hero::after {
-    content: ' ”';
-    position: absolute;
-    inset-inline-start: 52rem;
-    inset-block-start: 22rem;
-    font-family: var(--font-sans);
+	content: ' ”';
+	position: absolute;
+	inset-inline-start: 52rem;
+	inset-block-start: 22rem;
+	font-family: var(--font-sans);
 	font-weight: 700;
-    font-size: 38rem;
-    line-height: 1;
+	font-size: 38rem;
+	line-height: 1;
 }
 
 /* <em> class */
-.humanist {
-	font-family: 'linotype-sabon', serif;
+em {
 	font-weight: 700;
 	font-style: normal;
 	font-size: var(--size-sm);
-}
-.transitional {
-	font-family: 'berthold-baskerville-pro', serif;
-	font-weight: 700;
-	font-style: normal;
-	font-size: var(--size-sm);
-}
-.modern {
-	font-family: 'bodoni-std', serif;
-	font-weight: 700;
-	font-style: normal;
-	font-size: var(--size-sm);
-}
-.geometric {
-	font-family: 'futura-pt', sans-serif;
-	font-weight: 600;
-	font-style: normal;
-	font-size: var(--size-sm);
+
+	&.humanist {
+		font-family: 'linotype-sabon', serif;
+	}
+
+	&.transitional {
+		font-family: 'berthold-baskerville-pro', serif;
+	}
+
+	&.modern {
+		font-family: 'bodoni-std', serif;
+	}
+
+	&.geometric {
+		font-family: 'futura-pt', sans-serif;
+		font-weight: 600;
+	}
 }
 
 /* classification class */
@@ -285,8 +293,8 @@ and make the typography work more like an image. */
 
 	dt {
 		font-weight: 400;
-        font-style: normal;
-        font-size: var(--size-lg);
+		font-style: normal;
+		font-size: var(--size-lg);
 	}
 
 	.class-humanist {
@@ -316,7 +324,7 @@ and make the typography work more like an image. */
 /* Appendix class */
 .typeface-credit {
 	line-height: 0.8;
-    margin-block-end: var(--size-md);
+	margin-block-end: var(--size-md);
 
 	dt {
 		margin-block-start: var(--size-md);
