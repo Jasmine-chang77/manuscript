@@ -145,6 +145,16 @@ body {
 		}
 	}
 
+	em {
+		font-weight: 300;
+		font-style: italic;
+	}
+
+	strong {
+		font-weight: 500;
+		color: var(--color-accent3);
+	}
+
 	summary {
 		cursor: pointer;
 		list-style: none;
@@ -178,10 +188,10 @@ main {
 		max-inline-size: 85ch;  /* narrower response */
 		margin-inline-start: auto;  /* push to right */
 		margin-block: var(--size-xl);
+	}
 
-		q {
-			font-style: italic;
-		}
+	q {
+		font-style: italic;
 	}
 
 	dl {
@@ -257,28 +267,32 @@ and make the typography work more like an image. */
 }
 
 /* <em> class */
-em {
+.humanist,
+.transitional,
+.modern,
+.geometric {
+	font-size: var(--size-sm);
 	font-weight: 700;
 	font-style: normal;
-	font-size: var(--size-sm);
-
-	&.humanist {
-		font-family: 'linotype-sabon', serif;
-	}
-
-	&.transitional {
-		font-family: 'berthold-baskerville-pro', serif;
-	}
-
-	&.modern {
-		font-family: 'bodoni-std', serif;
-	}
-
-	&.geometric {
-		font-family: 'futura-pt', sans-serif;
-		font-weight: 600;
-	}
+	padding-inline: var(--size-2xs);
 }
+.humanist {
+	font-family: 'linotype-sabon', serif;
+}
+
+.transitional {
+	font-family: 'berthold-baskerville-pro', serif;
+}
+
+.modern {
+	font-family: 'bodoni-std', serif;
+}
+
+.geometric {
+	font-family: 'futura-pt', sans-serif;
+	font-weight: 600;
+}
+
 
 /* classification class */
 .classification {
@@ -318,6 +332,31 @@ em {
 	}
 	.class-geometric-sans {
 		font-family: 'futura-pt', serif;
+	}
+}
+
+/* punctuation class */
+.punctuation {
+	dd {
+		font-family: var(--font-sans);
+		font-weight: 400;
+		font-style: normal;
+		font-size: calc(0.6 * var(--size-sm));
+		letter-spacing: var(--size-2xs);
+		margin-block: -1.2rem;
+	}
+
+	dt {
+		font-weight: 400;
+		font-style: normal;
+		font-size: var(--size-2xl);
+	}
+
+	.punctuation-transitional-sans {
+		font-family: 'helvetica-lt-pro', sans-serif;
+	}
+	.punctuation-modern {
+		font-family: 'bodoni-std', serif;
 	}
 }
 
