@@ -11,6 +11,7 @@ Demo/template for our [first projects](https://typography-interaction-2627.githu
 >
 > The goal of this project is to hone your basic skills in typography, focusing on expression, hierarchy, and form appropriate to a work. You will do this through exploration, trial and error, and responding to critical feedback. And then you will execute this typesetting in code, as a web page
 
+<!-- Start here -->
 
 # Thinking with Type, Ellen Lupton — Reading Response
 
@@ -46,7 +47,7 @@ Additional typefaces are used as specimens throughout the website to demonstrate
 
 The website was built with semantic HTML and CSS.
 
-I used semantic elements such as `article`, `section`, `aside`, `blockquote`, `q`, and description lists to organize the content based on its meaning rather than only its appearance.
+I used semantic elements such as `article`, `section`, `aside`, `blockquote`, `em`, `strong`, `q`, and description lists to organize the content based on its meaning rather than only its appearance.
 
 Most of the website follows the normal document flow, but the hero uses relative and absolute positioning because I wanted more freedom to arrange the typography like a book cover or poster composition.
 
