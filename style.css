@@ -52,7 +52,7 @@ h2 {
 	font-family: var(--font-serif);
 	font-weight: 500;
 	font-style: normal;
-	font-size: calc(1.8 * var(--size-sm));
+	font-size: calc(var(--size-md));
 	letter-spacing: var(--size-2xs);
 }
 
@@ -60,7 +60,7 @@ h3, summary {
 	font-family: var(--font-serif);
 	font-weight: 500;
 	font-style: normal;
-	font-size: calc(1.2 * var(--size-sm));
+	font-size: calc(var(--size-sm-md));
 	letter-spacing: var(--size-2xs);
 }
 
@@ -68,7 +68,7 @@ h4 {
 	font-family: var(--font-sans);
 	font-weight: 700;
 	font-style: normal;
-	font-size: var(--size-sm);
+	font-size: var(--size-sm-md);
 	letter-spacing: var(--size-2xs);
 }
 
@@ -88,48 +88,50 @@ body {
 	font-family: var(--font-serif);
 	font-weight: 300;
 	font-style: normal;
-	font-size: calc(1.2 * var(--size-sm));
+	font-size: calc(1.4 * var(--size-sm));
 	line-height: 1.8;
 
-	hgroup {
-		font-family: var(--font-serif);
-		font-weight: 400;
-		font-style: normal;
-		font-size: calc(1.4 * var(--size-sm));
-		line-height: 1;
-	}
+	header {
+		hgroup {
+			font-family: var(--font-serif);
+			font-weight: 400;
+			font-style: normal;
+			font-size: calc(1.4 * var(--size-sm));
+			line-height: 1;
+		}
 
-	header p {
-		line-height: 1;
-	}
+		p {
+			line-height: 1;
+		}
 
-	nav {
-		font-size: calc(0.9 * var(--size-sm));
-		line-height: 1;
-		margin-block-start: var(--size-xl);
-		margin-block-end: var(--size-2xl);
+		nav {
+			font-size: calc(1.2 * var(--size-sm));
+			line-height: 1;
+			margin-block-start: var(--size-xl);
+			margin-block-end: var(--size-2xl);
 
-		/* I want to indent the navigation list, so I searched on MDN for how to do it. */
-		/* https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/text-indent */
+			/* I want to indent the navigation list, so I searched on MDN for how to do it. */
+			/* https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/text-indent */
 
-		/* I originally added the same class to every nested navigation item. Based on the feedback, I realized I could use the nested HTML structure as the CSS selector instead. */
-		/* ul ul li means an li that is inside a ul nested within another ul. */
+			/* I originally added the same class to every nested navigation item. Based on the feedback, I realized I could use the nested HTML structure as the CSS selector instead. */
+			/* ul ul li means an li that is inside a ul nested within another ul. */
 
-		ul ul li {
-			text-indent: var(--size-sm-md);
+			ul ul li {
+				text-indent: var(--size-sm-md);
 
-			&::before {
-				content: '»';
-				margin-inline-end: var(--size-xs);
+				&::before {
+					content: '»';
+					margin-inline-end: var(--size-xs);
+				}
+			}
+			/* Spacing between two navigation groups */
+			ul ul {
+				margin-block-start: var(--size-sm);
+				margin-block-end: var(--size-md);
 			}
 		}
-
-		/* Spacing between two navigation groups */
-		 ul ul {
-			margin-block-start: var(--size-sm);
-			margin-block-end: var(--size-md);
-		}
 	}
+
 
 	h2, h3, h4 {
 		line-height: 1;
@@ -182,11 +184,11 @@ main {
 		font-family: var(--font-sans);
 		font-weight: 400;
 		font-style: normal;
-		font-size: calc(0.9 * var(--size-sm));
+		font-size: calc(1.2 * var(--size-sm));
 		color: var(--color-res);
 
-		max-inline-size: 85ch;  /* narrower response */
-		margin-inline-start: auto;  /* push to right */
+		max-inline-size: 60ch;  /* narrower response */
+		margin-inline-start: 30rem;  /* push to right */
 		margin-block: var(--size-xl);
 	}
 
@@ -217,54 +219,55 @@ main {
 .hero {
 	position: relative;
 	min-block-size: 90vh;
-}
-/* I used position: absolute to freely arrange the type and quotation marks
-and make the typography work more like an image. */
-.hero hgroup {
-	position: absolute;
-	inset-inline-start: 15rem;
-	inset-block-start: 3.5rem;
 
-	h1 {
+	/* I used position: absolute to freely arrange the type and quotation marks and make the typography work more like an image. */
+	hgroup {
+		position: absolute;
+		inset-inline-start: 15rem;
+		inset-block-start: 3.5rem;
+
+		h1 {
+			font-family: var(--font-sans);
+			font-weight: 400;
+			font-size: var(--size-lg);
+			line-height: 0.9;
+		}
+		span {
+			display: block;
+			font-weight: 700;
+			font-size: calc(7 * var(--size-lg));
+		}
+	}
+	.book-info {
+		position: absolute;
+		inset-inline-start: 45rem;
+		inset-block-start: 25rem;
 		font-family: var(--font-sans);
 		font-weight: 400;
-		font-size: var(--size-lg);
-		line-height: 0.9;
+		font-size: var(--size-sm-md);
 	}
-	span {
-		display: block;
+	&::before {
+		content: ' “';
+		position: absolute;
+		inset-inline-start: -12rem;
+		inset-block-start: -12rem;
+		font-family: var(--font-sans);
 		font-weight: 700;
-		font-size: calc(7 * var(--size-lg));
+		font-size: 38rem;
+		line-height: 1;
+	}
+	&::after {
+		content: ' ”';
+		position: absolute;
+		inset-inline-start: 52rem;
+		inset-block-start: 22rem;
+		font-family: var(--font-sans);
+		font-weight: 700;
+		font-size: 38rem;
+		line-height: 1;
 	}
 }
-.book-info {
-	position: absolute;
-	inset-inline-start: 45rem;
-	inset-block-start: 25rem;
-	font-family: var(--font-sans);
-	font-weight: 400;
-	font-size: var(--size-sm-md);
-}
-.hero::before {
-	content: ' “';
-	position: absolute;
-	inset-inline-start: -12rem;
-	inset-block-start: -12rem;
-	font-family: var(--font-sans);
-	font-weight: 700;
-	font-size: 38rem;
-	line-height: 1;
-}
-.hero::after {
-	content: ' ”';
-	position: absolute;
-	inset-inline-start: 52rem;
-	inset-block-start: 22rem;
-	font-family: var(--font-sans);
-	font-weight: 700;
-	font-size: 38rem;
-	line-height: 1;
-}
+
 
 /* <em> class */
 .humanist,
